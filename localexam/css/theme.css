@@ -1,0 +1,416 @@
+/*
+ * Copyright (C) 2022 H. KASSIMI
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+.root {
+    -fx-fill-teal : #8191a6;
+    -fx-fill-yellow : #f2dc9b;
+    -fx-fill-red : #f2836b;
+    -fx-fill-light-grey : #dfdfdf;
+    -fx-fill-grey : #bbbbbb;
+    -fx-fill-dark-grey : #404040;
+    -fx-fill-color5 : #f2836b;
+    -fx-fill-blank : #ffffff;
+    -fx-fill-trans-dark-grey : #40404050;
+    -fx-fill-trans-light-grey : #dfdfdf50;
+    -fx-fill-default : #F4F4F4;
+
+    -fx-font-family: "Tahoma";
+    -fx-font-smoothing-type: lcd;
+}
+
+.bottom-bar {
+    -fx-border-width: 0 0 5 0;
+    -fx-border-color: -fx-fill-yellow;
+}
+
+.bottom-half-bar {
+    -fx-border-width: 0 0 2.5 0;
+    -fx-border-color: -fx-fill-yellow;
+}
+
+.title {
+    -fx-font-size: 21;
+}
+
+.btn {
+    -fx-background-color: -fx-fill-teal;
+    -fx-text-fill: -fx-fill-blank;
+    -fx-font-size: 14;
+}
+
+.btn:hover {
+    -fx-background-color: -fx-fill-red;
+}
+
+.btn:focused {
+    -fx-background-color: -fx-fill-dark-grey;
+}
+
+.ribbon-btn {
+    -fx-background-color: -fx-fill-light-grey;
+    -fx-text-fill: -fx-fill-dark-grey;
+    -fx-font-size: 12;
+    -fx-border-radius: 0 0 0 0;
+    -fx-background-radius: 0 0 0 0;
+    -fx-min-width: 64;
+}
+
+.ribbon-btn:hover {
+    -fx-background-color: -fx-fill-grey;
+}
+
+.ribbon-btn:pressed {
+    -fx-background-color: -fx-fill-dark-grey;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.ribbon-btn:pressed .icon {
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.ribbon-btn:focused {
+    -fx-border-width: 0;
+}
+
+.ribbon-btn.selected {
+    -fx-background-color: -fx-fill-dark-grey;
+}
+
+.icon {
+    -fx-font-family: "IcoMoon-Free";
+    -fx-font-size: 16;
+}
+
+.icon-32 {
+    -fx-font-family: "IcoMoon-Free";
+    -fx-font-size: 32;
+}
+
+.ribbon-control {
+    /* -fx-border-width: 0 1 0 0; */
+    /* -fx-border-color: -fx-fill-grey; */
+}
+
+.ribbon-vseparator .line {
+    -fx-border-width: 0 1 0 0;
+    -fx-border-color: -fx-fill-grey;
+}
+
+.ribbon {
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: -fx-fill-grey;
+    -fx-direction: rtl;
+    -fx-tab-min-width: 24px;
+}
+
+.ribbon-area, .ribbon-control {
+    -fx-background-color: -fx-fill-light-grey;
+}
+
+.ribbon-menu {
+    -fx-background-color: -fx-fill-grey;
+    -fx-text-fill: -fx-fill-dark-grey;
+    -fx-border-color: -fx-fill-grey;
+}
+
+
+.ribbon-menu:selected {
+    -fx-background-color: -fx-fill-light-grey;
+    -fx-text-fill: -fx-fill-blank;
+    -fx-border-color: -fx-fill-grey -fx-fill-grey -fx-fill-light-grey -fx-fill-grey;
+}
+
+.ribbon-menu:focused {
+    -fx-background-color: -fx-fill-red;
+    -fx-text-fill: -fx-fill-blank;
+    -fx-border-color: -fx-fill-grey -fx-fill-grey -fx-fill-light-grey -fx-fill-grey;
+}
+
+.icm-tg-btn, .icm-tg-btn .icm {
+    -fx-background-color: -fx-fill-yellow;
+    -fx-background-radius: 0;
+    -fx-text-fill: -fx-fill-dark-grey;
+}
+
+.icm-tg-btn:hover, .icm-tg-btn:hover .icm {
+    -fx-background-color: -fx-fill-dark-grey;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.icm-tg-btn:selected, .icm-tg-btn:selected .icm {
+    -fx-background-color: -fx-fill-red;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.infos-tf {
+    -fx-border-width: 0 0 2 0;
+    -fx-border-color: transparent transparent -fx-fill-teal transparent;
+}
+
+.left-bar {
+    -fx-background-color: -fx-fill-light-grey;
+}
+
+.icm {
+    /*-fx-font-family: "Tajawal";*/
+    -fx-font-family: "IcoMoon-Free";
+    -fx-font-size: 12;
+}
+
+.body-title {
+    -fx-font-size: 14;
+    -fx-font-weight: 700;
+    -fx-text-fill: -fx-fill-dark-grey;
+}
+
+.lbl {
+    -fx-text-fill: -fx-fill-dark-grey;
+    -fx-font-size: 14;
+}
+
+.btn.icm {
+    -fx-font-family: "IcoMoon-Free";
+    -fx-background-color: -fx-fill-teal;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.btn.icm:hover {
+    -fx-background-color: -fx-fill-red;
+}
+
+.btn.icm:focused {
+    -fx-background-color: -fx-fill-dark-grey;
+}
+
+.p {
+    -fx-font-size: 12;
+}
+
+.p14 {
+    -fx-font-size: 14;
+}
+
+.tooltip {
+    -fx-background-color: -fx-fill-dark-grey;
+    -fx-font-size: 12;
+    -fx-font-family: "Tahoma";
+}
+
+/*.timer-start {
+    -fx-border-width: 1 0 1 0;
+    -fx-border-color: -fx-fill-teal;
+}*/
+.timer-start {
+    -fx-progress-color: -fx-fill-yellow;
+}
+/*.timer-start .nextPlan {
+    -fx-background-color: -fx-fill-teal;
+    -fx-text-fill: -fx-fill-blank;
+    -fx-font-size: 14;
+}*/
+
+.timer-end {
+    /*    -fx-border-width: 1 0 1 0;
+        -fx-border-color: -fx-fill-red;*/
+    -fx-progress-color: -fx-fill-red;
+}
+
+/*.timer-end .nextPlan {
+    -fx-background-color: -fx-fill-red;
+    -fx-text-fill: -fx-fill-blank;
+    -fx-font-size: 14;
+}*/
+
+.labeled-btn {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0 0 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
+
+.labeled-btn:hover {
+    -fx-background-color: -fx-fill-red;
+}
+
+.labeled-btn:selected {
+    -fx-background-color: -fx-fill-dark-grey;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.scroll-pane, .scroll-pane:focused {
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+.sidebar {
+    -fx-border-width: 0 0 0 0.25;
+    -fx-border-color: -fx-fill-dark-grey;
+    -fx-background-color: -fx-fill-teal;
+}
+
+.sidebar .btn {
+    -fx-background-color: -fx-fill-light-grey;
+    -fx-text-fill: -fx-fill-dark-grey;
+}
+
+.sidebar .btn:hover {
+    -fx-background-color: -fx-fill-red;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.sidebar .btn:focused, .sidebar .icm:focused {
+    -fx-background-color: -fx-fill-dark-grey;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.sidebar .infos-tf {
+    -fx-border-color: transparent transparent -fx-fill-yellow transparent;
+}
+
+.sidebar .label {
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.status-bar {
+    -fx-border-width: 0.25 0 0 0;
+    -fx-border-color: -fx-fill-blank;
+    -fx-background-color: -fx-fill-teal;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.status-bar .label, .status-bar .icm {
+    -fx-text-fill: -fx-fill-blank;
+}
+
+/*.timer {
+    -fx-background-color: -fx-fill-dark-grey;
+    -fx-text-fill: -fx-fill-blank;
+}*/
+
+/*.timer-start, .timer-end {
+    -fx-background-color: -fx-fill-yellow;
+    -fx-text-fill: -fx-fill-blank;
+}*/
+
+.timer .title {
+
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.pi {
+    -fx-padding: 0 0 -16 0;
+    -fx-box-border: transparent;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.pi .percentage, .pi .tick {
+    -fx-opacity: 0;
+    -fx-fill: null;
+}
+
+.pi .indicator {
+    -fx-background-color: transparent;
+    -fx-box-border: transparent;
+    -fx-border-color: -fx-fill-dark-grey;
+    -fx-border-width: 0.25;
+}
+
+.combo-box-popup .list-view {
+    -fx-padding: 2px;
+    -fx-text-fill: -fx-fill-red;
+}
+
+.slide-show .table-view {
+    -fx-font-size: 20;
+}
+
+.slide-show .h3 {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+}
+
+.modal {
+    -fx-border-width: 0.5;
+    -fx-border-color: -fx-fill-dark-grey;
+    -fx-background-color: -fx-fill-default;
+}
+
+.transparent-list {
+    -fx-background-color: transparent;
+}
+
+.transparent-list .list-cell {
+    -fx-background-color: transparent;
+}
+
+.transparent-list .list-cell:filled:selected:focused *, .transparent-list .list-cell:filled:selected * {
+    -fx-text-fill: -fx-fill-dark-grey;
+}
+
+.darken {
+    -fx-background-color: -fx-fill-trans-light-grey;
+
+}
+
+.icm-transparent-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-fill-dark-grey;
+    -fx-font-family: "IcoMoon-Free";
+    -fx-font-size: 15;
+}
+
+.icm-transparent-btn:hover {
+    -fx-text-fill: -fx-fill-red;
+}
+
+.background-teal {
+    -fx-background-color: -fx-fill-teal;
+}
+
+.background-yellow {
+    -fx-background-color: -fx-fill-yellow;
+}
+
+.background-red {
+    -fx-background-color: -fx-fill-red;
+    -fx-text-fill: -fx-fill-blank;
+}
+
+.border-yellow {
+    -fx-border-color: -fx-fill-yellow;
+    -fx-border-width: 1 1 1 1;
+}
+
+.progress-indicator:indeterminate { 
+    -fx-progress-color: -fx-fill-red; 
+} 
+
+.printable-options {
+    -fx-pref-width: 400;
+    -fx-width: 400;
+    -fx-max-width: 400;
+    -fx-min-width: 400;
+}
+
+.main-panel {
+    -fx-min-width: 600;
+    -fx-min-height: 400;
+    -fx-pref-width: 600;
+}
