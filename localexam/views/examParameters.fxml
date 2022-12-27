@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="localexam.controllers.ExamParametersController">
+   <children>
+      <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+         <children>
+            <HBox spacing="12.0">
+               <children>
+                  <VBox maxWidth="-Infinity" spacing="12.0">
+                     <children>
+                        <Label text="إعدادات الامتحان :">
+                           <styleClass>
+                              <String fx:value="body-title" />
+                              <String fx:value="bottom-half-bar" />
+                           </styleClass>
+                        </Label>
+                        <VBox alignment="CENTER" minWidth="200.0" spacing="6.0">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="تسمية الامتحان :" />
+                              <TextField fx:id="examNameTF" />
+                              <GridPane hgap="12.0" layoutX="10.0" layoutY="123.0" vgap="6.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" prefWidth="60.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="text" text="أقصى عدد ممتحنين في قاعة :" />
+                                    <Spinner fx:id="maxCandsSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" GridPane.rowIndex="1" />
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="text" text="رقم القاعة الأولى :" GridPane.columnIndex="1" />
+                                    <Spinner fx:id="firstRoomSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <GridPane hgap="6.0" vgap="6.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="text" text="رقم الامتحان الأول :" />
+                                    <HBox spacing="6.0" GridPane.rowIndex="1">
+                                       <children>
+                                          <Spinner fx:id="firstCodeSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="randCodeBtn" maxHeight="1.7976931348623157E308" minWidth="32.0" mnemonicParsing="false" styleClass="icm" text="">
+                                             <tooltip>
+                                                <Tooltip text="رقم عشوائي" />
+                                             </tooltip>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                    <Label layoutX="10.0" layoutY="10.0" maxWidth="1.7976931348623157E308" styleClass="text" text="الرقم (السري) للإزاحة :" GridPane.columnIndex="1" />
+                                    <HBox layoutX="10.0" layoutY="31.0" spacing="6.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                       <children>
+                                          <Spinner fx:id="transCodeSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="randTransCodeBtn" maxHeight="1.7976931348623157E308" minWidth="32.0" mnemonicParsing="false" styleClass="icm" text="">
+                                             <tooltip>
+                                                <Tooltip text="رقم عشوائي" />
+                                             </tooltip>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                              <Button fx:id="applyBtn" mnemonicParsing="false" styleClass="btn" text="اعتماد">
+                                 <padding>
+                                    <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <StackPane>
+                           <children>
+                              <VBox spacing="6.0">
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="text" text="ترتيب القاعات :">
+                                       <VBox.margin>
+                                          <Insets top="6.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <HBox alignment="CENTER" minHeight="-Infinity" spacing="12.0">
+                                       <children>
+                                          <Label fx:id="rooms1DetLbl" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" wrapText="true" HBox.hgrow="ALWAYS" />
+                                          <Button fx:id="switchBtn" mnemonicParsing="false" styleClass="icm" text="">
+                                             <tooltip>
+                                                <Tooltip text="قلب القاعات رأسا على عقب" />
+                                             </tooltip>
+                                          </Button>
+                                          <Label fx:id="rooms2DetLbl" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" wrapText="true" HBox.hgrow="ALWAYS" />
+                                       </children>
+                                    </HBox>
+                                    <TableView fx:id="roomsTV" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                                       <columns>
+                                          <TableColumn fx:id="numeroTC" prefWidth="75.0" text="القاعة" />
+                                          <TableColumn fx:id="labelTC" prefWidth="120.0" text="التسمية" />
+                                          <TableColumn fx:id="capacityTC" prefWidth="75.0" text="السعة" />
+                                       </columns>
+                                    </TableView>
+                                    <HBox alignment="CENTER" spacing="12.0">
+                                       <children>
+                                          <Label contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="عدد القاعات:">
+                                             <graphic>
+                                                <Label fx:id="roomsLbl" alignment="CENTER_RIGHT" styleClass="counter" text="000" />
+                                             </graphic>
+                                             <padding>
+                                                <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
+                                             </padding>
+                                          </Label>
+                                          <Separator layoutX="222.0" layoutY="10.0" orientation="VERTICAL">
+                                             <padding>
+                                                <Insets bottom="2.0" top="2.0" />
+                                             </padding>
+                                          </Separator>
+                                          <Label contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="مجموع الممتحنين :">
+                                             <graphic>
+                                                <Label fx:id="levStusLbl" alignment="CENTER_RIGHT" styleClass="counter" text="000" />
+                                             </graphic>
+                                          </Label>
+                                          <Separator orientation="VERTICAL">
+                                             <padding>
+                                                <Insets bottom="2.0" top="2.0" />
+                                             </padding>
+                                          </Separator>
+                                          <Label fx:id="goodDistribLbl" contentDisplay="RIGHT" layoutX="137.0" layoutY="10.0" maxWidth="1.7976931348623157E308" text="" visible="false" wrapText="true">
+                                             <styleClass>
+                                                <String fx:value="icm" />
+                                                <String fx:value="icon" />
+                                             </styleClass>
+                                             <tooltip>
+                                                <Tooltip text="توزيع الممتحنين جيد" />
+                                             </tooltip>
+                                          </Label>
+                                          <Label fx:id="notDistributedLbl" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" text="" visible="false" wrapText="true" HBox.hgrow="ALWAYS">
+                                             <tooltip>
+                                                <Tooltip contentDisplay="TOP" text="الممتحنون غير الموزعين على القاعات">
+                                                   <graphic>
+                                                      <Label fx:id="notDistributedCountLbl" contentDisplay="TOP" />
+                                                   </graphic>
+                                                </Tooltip>
+                                             </tooltip>
+                                             <styleClass>
+                                                <String fx:value="icm" />
+                                                <String fx:value="icon" />
+                                             </styleClass>
+                                          </Label>
+                                          <Label fx:id="excessiveLbl" contentDisplay="RIGHT" maxWidth="1.7976931348623157E308" text="" visible="false" wrapText="true" HBox.hgrow="ALWAYS">
+                                             <tooltip>
+                                                <Tooltip contentDisplay="TOP" text="سعة القاعات الإجمالية أكبر من عدد الممتحنين">
+                                                   <graphic>
+                                                      <Label fx:id="excessiveCountLbl" />
+                                                   </graphic>
+                                                </Tooltip>
+                                             </tooltip>
+                                             <styleClass>
+                                                <String fx:value="icm" />
+                                                <String fx:value="icon" />
+                                             </styleClass>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="roomsModalVB" styleClass="darken" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+                  <Separator orientation="VERTICAL" prefHeight="200.0">
+                     <padding>
+                        <Insets bottom="36.0" top="36.0" />
+                     </padding>
+                  </Separator>
+                  <StackPane maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                     <children>
+                        <VBox spacing="6.0">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="ترتيب الممتحنين :">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox>
+                                 <children>
+                                    <ToggleButton fx:id="noOrderTB" mnemonicParsing="false" selected="true" styleClass="icm-tg-btn" text="طبيعي">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="sortMethodTG" />
+                                       </toggleGroup>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="randOrderTB" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="عشوائي" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="nameAscOrderTB" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="اسم" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="nameDescOrderTB" layoutX="119.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="اسم" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="lNameAscOrderTB" layoutX="119.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="نسب" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="lNameDescOrderTB" layoutX="174.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="نسب" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="codeAscOrderTB" layoutX="119.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="مسار" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="codeDescOrderTB" layoutX="174.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="مسار" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="ageAscOrderTB" layoutX="237.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="عمر" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="ageDescOrderTB" layoutX="297.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="عمر" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="genAscOrderTB" layoutX="365.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="نوع" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                    <ToggleButton fx:id="genDescOrderTB" layoutX="419.0" layoutY="10.0" mnemonicParsing="false" styleClass="icm-tg-btn" text="نوع" toggleGroup="$sortMethodTG">
+                                       <graphic>
+                                          <Label styleClass="icm" text="" />
+                                       </graphic>
+                                    </ToggleButton>
+                                 </children>
+                              </HBox>
+                              <TableView fx:id="studentsTV" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+                                 <columns>
+                                    <TableColumn fx:id="numTC" prefWidth="24.0" text="#" />
+                                    <TableColumn fx:id="fNameTC" prefWidth="140.0" text="الاسم" />
+                                    <TableColumn fx:id="lNameTC" prefWidth="140.0" text="النسب" />
+                                    <TableColumn fx:id="massarTC" prefWidth="120.0" text="رمز مسار" />
+                                    <TableColumn fx:id="groupTC" prefWidth="64.0" text="القسم" />
+                                    <TableColumn fx:id="examCodeTC" prefWidth="96.0" text="رقم الامتحان" />
+                                    <TableColumn fx:id="roomTC" prefWidth="120.0" text="القاعة" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </VBox>
+                        <VBox fx:id="candsModalVB" styleClass="darken" />
+                     </children>
+                  </StackPane>
+               </children>
+            </HBox>
+            <VBox fx:id="editRoomVB" alignment="CENTER" fillWidth="false" styleClass="darken" visible="false" StackPane.alignment="CENTER">
+               <children>
+                  <StackPane>
+                     <children>
+                        <VBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="400.0" spacing="6.0" styleClass="modal">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="تسمية القاعة :" />
+                              <TextField fx:id="roomNameTF" maxWidth="1.7976931348623157E308" />
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="سعة القاعة :">
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <Spinner fx:id="roomCapacitySP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" />
+                              <HBox alignment="CENTER" spacing="12.0">
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button fx:id="editRoomBtn" mnemonicParsing="false" styleClass="btn" text="تعديل" />
+                                    <Button fx:id="cancelEditRoomBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="btn" text="إلغاء" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                           </StackPane.margin>
+                        </VBox>
+                        <Button fx:id="editRoomCloseBtn" mnemonicParsing="false" styleClass="icm-transparent-btn" text="" StackPane.alignment="TOP_RIGHT" />
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+            <VBox fx:id="editCandidateVB" alignment="CENTER" fillWidth="false" layoutX="10.0" layoutY="10.0" styleClass="darken" visible="false">
+               <children>
+                  <StackPane>
+                     <children>
+                        <VBox alignment="CENTER_LEFT" minWidth="-Infinity" prefWidth="400.0" spacing="6.0" styleClass="modal">
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="رقم الامتحان :" />
+                              <Spinner fx:id="examCodeSP" editable="true" layoutX="10.0" layoutY="62.0" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" />
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="القاعة :">
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <ComboBox fx:id="roomsCB" maxWidth="1.7976931348623157E308" />
+                              <HBox alignment="CENTER" spacing="12.0">
+                                 <VBox.margin>
+                                    <Insets top="6.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <Button fx:id="editCandidateBtn" mnemonicParsing="false" styleClass="btn" text="تعديل" />
+                                    <Button fx:id="cancelEditCandidateBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="btn" text="إلغاء" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+                           </padding>
+                           <StackPane.margin>
+                              <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                           </StackPane.margin>
+                        </VBox>
+                        <Button fx:id="editCandidateCloseBtn" mnemonicParsing="false" styleClass="icm-transparent-btn" text="" StackPane.alignment="TOP_RIGHT" />
+                     </children>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+   </children>
+</VBox>

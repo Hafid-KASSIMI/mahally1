@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../css/theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="localexam.controllers.MainWindowController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" stylesheets="@../css/theme.css">
+         <top>
+            <TabPane fx:id="ribbonBarTP" prefHeight="100.0" styleClass="ribbon" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab fx:id="filaeTab" closable="false" styleClass="ribbon-menu" text="مستند">
+                     <content>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-area">
+                           <children>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-control">
+                                 <children>
+                                    <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="2.0" styleClass="ribbon-area" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="newBtn" contentDisplay="TOP" layoutX="124.0" layoutY="16.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="جديد" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="openBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="فتح" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="saveBtn" contentDisplay="TOP" layoutX="16.0" layoutY="16.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="حفظ" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="saveAsBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="حفظ باسم جديد" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                             <graphic>
+                                                <StackPane>
+                                                   <children>
+                                                      <Label contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="10.0" layoutY="10.0" styleClass="icon" text="2">
+                                                         <StackPane.margin>
+                                                            <Insets />
+                                                         </StackPane.margin>
+                                                      </Label>
+                                                      <Label contentDisplay="RIGHT" graphicTextGap="0.0" styleClass="icon" text="" />
+                                                   </children>
+                                                </StackPane>
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" styleClass="ribbon-vseparator">
+                                 <padding>
+                                    <Insets bottom="6.0" top="6.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox layoutX="13.0" layoutY="13.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-control">
+                                 <children>
+                                    <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="2.0" styleClass="ribbon-area" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="quitBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="خروج" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="3.0" top="3.0" />
+                           </padding>
+                        </HBox>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="opsTab" closable="false" styleClass="ribbon-menu" text="مركز الامتحان">
+                     <content>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-area">
+                           <children>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-control">
+                                 <children>
+                                    <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="2.0" styleClass="ribbon-area" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="paramsBtn" contentDisplay="TOP" layoutX="124.0" layoutY="16.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="إعدادات الامتحان" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="timeTableBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="تواريخ ومواقيت" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="enterMarksBtn" contentDisplay="TOP" layoutX="16.0" layoutY="16.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="رقن النقط" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="enterTransMarksBtn" contentDisplay="TOP" layoutX="205.0" layoutY="12.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="رقن النقط بأرقام مزاحة" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="3.0" top="3.0" />
+                           </padding>
+                        </HBox>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="exImTab" closable="false" styleClass="ribbon-menu" text="تصدير واستيراد">
+                     <content>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-area">
+                           <children>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-control">
+                                 <children>
+                                    <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="2.0" styleClass="ribbon-area" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="exportBtn" contentDisplay="TOP" layoutX="124.0" layoutY="16.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="تصدير مستند تنقيط" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="exportExcelFileBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="تصدير بيان نقط إكسيل" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                             <graphic>
+                                                <Label contentDisplay="RIGHT" graphicTextGap="2.0" styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="multiExportBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="تصدير مستندات تنقيط" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Separator orientation="VERTICAL" styleClass="ribbon-vseparator">
+                                 <padding>
+                                    <Insets bottom="6.0" top="6.0" />
+                                 </padding>
+                              </Separator>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-control">
+                                 <children>
+                                    <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="2.0" styleClass="ribbon-area" VBox.vgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                       <children>
+                                          <Button fx:id="importBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="استيراد مستند تنقيط" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="3.0" top="3.0" />
+                           </padding>
+                        </HBox>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="printTab" closable="false" styleClass="ribbon-menu" text="مطابيع">
+                     <content>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-area">
+                           <children>
+                              <Button fx:id="listsBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="لوائح الممتحنين" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="marksBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="أوراق التنقيط" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="statementBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="بيانات النقط" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="2.0" styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Separator orientation="VERTICAL" styleClass="ribbon-vseparator">
+                                 <padding>
+                                    <Insets bottom="6.0" top="6.0" />
+                                 </padding>
+                              </Separator>
+                              <Button fx:id="techCardBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="بطاقة تقنية" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="2.0" styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="labelsBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="ترقيم المقاعد" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="roomsLabelsBtn" contentDisplay="TOP" layoutX="334.0" layoutY="13.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="تسميات القاعات" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="coversBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="أغلفة أوراق التحرير" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="listsHeadersBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="ترويسات لوائح الممتحنين" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="guardsBtn" contentDisplay="TOP" layoutX="607.0" layoutY="13.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="جداول الحراسة" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="correctionHeadersBtn" contentDisplay="TOP" layoutX="607.0" layoutY="13.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="ترويسات أظرفة التصحيح" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Separator orientation="VERTICAL" styleClass="ribbon-vseparator">
+                                 <padding>
+                                    <Insets bottom="6.0" top="6.0" />
+                                 </padding>
+                              </Separator>
+                              <Button fx:id="requisitBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="استدعاءات" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="2.0" styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="pvsBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="محاضر التوقيعات" textAlignment="CENTER" textOverrun="CLIP" wrapText="true" HBox.hgrow="SOMETIMES">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="closingPvBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="محاضر الإغلاق" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="openingPvBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="محاضر الفتح" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="executionBtn" contentDisplay="TOP" layoutX="1051.0" layoutY="13.0" maxHeight="1.7976931348623157E308" maxWidth="96.0" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="مطابيع الإجراء" textAlignment="CENTER" textOverrun="CLIP" wrapText="true">
+                                 <graphic>
+                                    <Label styleClass="icon" text="" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets left="3.0" top="3.0" />
+                           </padding>
+                        </HBox>
+                     </content>
+                  </Tab>
+                  <Tab fx:id="helpTab" closable="false" styleClass="ribbon-menu" text="؟">
+                     <content>
+                        <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="left-bar">
+                           <children>
+                              <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="ribbon-control">
+                                 <children>
+                                    <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="2.0" VBox.vgrow="ALWAYS">
+                                       <padding>
+                                          <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                                       </padding>
+                                       <children>
+                                          <Button fx:id="aboutBtn" contentDisplay="TOP" maxHeight="1.7976931348623157E308" minWidth="48.0" mnemonicParsing="false" styleClass="ribbon-btn" text="عن البرمجية" textAlignment="CENTER" textOverrun="CLIP">
+                                             <graphic>
+                                                <Label styleClass="icon" text="" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets left="3.0" top="3.0" />
+                           </padding>
+                        </HBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </top>
+         <right>
+            <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" minWidth="160.0" spacing="12.0" styleClass="sidebar" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="leftBarVB" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="12.0" visible="false" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label fx:id="schoolLbl" alignment="CENTER" contentDisplay="TOP" graphicTextGap="6.0" maxWidth="1.7976931348623157E308">
+                           <graphic>
+                              <Label contentDisplay="TOP" styleClass="icon" text="" />
+                           </graphic>
+                        </Label>
+                        <Label fx:id="yearLbl" alignment="CENTER" contentDisplay="TOP" graphicTextGap="6.0" maxWidth="1.7976931348623157E308">
+                           <graphic>
+                              <Label contentDisplay="TOP" styleClass="icon" text="" />
+                           </graphic>
+                        </Label>
+                        <Separator>
+                           <padding>
+                              <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                           </padding>
+                        </Separator>
+                        <Label fx:id="levelLbl" text="Label" />
+                        <HBox alignment="CENTER" spacing="24.0">
+                           <children>
+                              <Label fx:id="stusCountLbl" alignment="CENTER" contentDisplay="TOP" graphicTextGap="6.0" maxWidth="1.7976931348623157E308" text="5">
+                                 <graphic>
+                                    <Label alignment="CENTER" contentDisplay="BOTTOM" focusTraversable="false" graphicTextGap="6.0" maxWidth="1.7976931348623157E308" styleClass="icon" text="">
+                                       <tooltip>
+                                          <Tooltip text="عدد الممتحنين الإجمالي ذكورا وإناثا" />
+                                       </tooltip>
+                                    </Label>
+                                 </graphic>
+                              </Label>
+                              <Separator orientation="VERTICAL">
+                                 <padding>
+                                    <Insets bottom="6.0" top="6.0" />
+                                 </padding>
+                              </Separator>
+                              <Label fx:id="girlsCountLbl" alignment="CENTER" contentDisplay="TOP" graphicTextGap="6.0" maxWidth="1.7976931348623157E308" text="5">
+                                 <graphic>
+                                    <Label alignment="CENTER" contentDisplay="BOTTOM" focusTraversable="false" graphicTextGap="6.0" maxWidth="1.7976931348623157E308" styleClass="icon" text="">
+                                       <tooltip>
+                                          <Tooltip text="عدد الممتحنات الإجمالي" />
+                                       </tooltip>
+                                    </Label>
+                                 </graphic>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="BOTTOM_RIGHT" maxWidth="1.7976931348623157E308" VBox.vgrow="NEVER">
+                     <children>
+                        <Label fx:id="appLbl" alignment="CENTER" focusTraversable="false" maxWidth="1.7976931348623157E308">
+                           <padding>
+                              <Insets bottom="3.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="6.0" top="6.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <StackPane fx:id="bodySP" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+               <padding>
+                  <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+               </padding>
+               <children>
+                  <fx:include fx:id="newExamVB" source="newExam.fxml" />
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+      <VBox fx:id="saveChangesVB" alignment="CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="darken" visible="false">
+         <children>
+            <StackPane>
+               <children>
+                  <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefWidth="340.0" spacing="6.0" styleClass="modal">
+                     <padding>
+                        <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+                     </padding>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" spacing="12.0">
+                           <children>
+                              <Label layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="36.0" styleClass="icon-32" text="" HBox.hgrow="SOMETIMES" />
+                              <Label maxWidth="1.7976931348623157E308" text="هناك تعديلات لم يتم حفظها بعد. أتود أن تحفظها قبل الإغلاق ؟" textAlignment="JUSTIFY" wrapText="true" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="12.0">
+                           <children>
+                              <Button fx:id="savePendingBtn" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="حفظ التعديلات">
+                                 <padding>
+                                    <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="forceCloseBtn" layoutX="86.0" layoutY="10.0" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="إغلاق">
+                                 <padding>
+                                    <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                                 </padding>
+                              </Button>
+                              <Button fx:id="cancelCloseBtn" layoutX="124.0" layoutY="10.0" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="إلغاء">
+                                 <padding>
+                                    <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                     </StackPane.margin>
+                  </VBox>
+                  <Button fx:id="saveChangesCloseBtn" mnemonicParsing="false" styleClass="icm-transparent-btn" text="" StackPane.alignment="TOP_RIGHT" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox fx:id="aboutVB" alignment="CENTER" fillWidth="false" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="darken" visible="false">
+         <children>
+            <StackPane>
+               <children>
+                  <VBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="340.0" spacing="12.0" styleClass="modal">
+                     <padding>
+                        <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+                     </padding>
+                     <children>
+                        <Label styleClass="body-title" text="برمجية محلي" textAlignment="JUSTIFY" wrapText="true" />
+                        <Label layoutX="35.0" layoutY="23.0" text="برمجية محلي مجانية ومفتوحة المصدر. يمكنك تعديل أو مشاركة كافة إصداراتها بحرية..." textAlignment="JUSTIFY" wrapText="true" />
+                        <Label layoutX="35.0" layoutY="53.0" styleClass="bottom-half-bar" text="معلومات تقنية :" textAlignment="JUSTIFY" wrapText="true" />
+                        <Label contentDisplay="RIGHT" layoutX="35.0" layoutY="95.0" text="النسخة : " textAlignment="JUSTIFY" wrapText="true">
+                           <graphic>
+                              <Label fx:id="aboutVerLbl" textAlignment="JUSTIFY" wrapText="true" />
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" layoutX="35.0" layoutY="125.0" text="تاريخ الإصدار : " textAlignment="JUSTIFY" wrapText="true">
+                           <graphic>
+                              <Label fx:id="aboutDateLbl" textAlignment="JUSTIFY" wrapText="true" />
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" layoutX="35.0" layoutY="122.0" text="نسخة جافا : 8" textAlignment="JUSTIFY" wrapText="true" />
+                        <Label contentDisplay="RIGHT" layoutX="35.0" layoutY="179.0" text="صفحة ويب : https://mdrassty.net/mahally" textAlignment="JUSTIFY" wrapText="true" />
+                        <Label contentDisplay="RIGHT" layoutX="35.0" layoutY="206.0" text="برمجة : ح. قاسمي [ hafid.kassimi@mdrassty.net ]" textAlignment="JUSTIFY" wrapText="true" />
+                     </children>
+                     <StackPane.margin>
+                        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                     </StackPane.margin>
+                  </VBox>
+                  <Button fx:id="aboutCloseBtn" mnemonicParsing="false" styleClass="icm-transparent-btn" text="" StackPane.alignment="TOP_RIGHT" />
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox fx:id="loadingDataVB" alignment="CENTER" fillWidth="false" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="darken" visible="false">
+         <children>
+            <StackPane>
+               <children>
+                  <VBox alignment="CENTER" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefWidth="340.0" spacing="6.0" styleClass="modal">
+                     <padding>
+                        <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                     </StackPane.margin>
+                     <children>
+                        <ProgressIndicator minHeight="100.0">
+                           <VBox.margin>
+                              <Insets bottom="12.0" left="12.0" right="12.0" top="12.0" />
+                           </VBox.margin></ProgressIndicator>
+                        <Label text="المرجو الانتظار..." />
+                     </children>
+                  </VBox>
+                  <Button fx:id="loadingDataCloseBtnVB" mnemonicParsing="false" styleClass="icm-transparent-btn" text="" StackPane.alignment="TOP_RIGHT" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+      <VBox fx:id="fileNotRecognizedVB" alignment="CENTER" fillWidth="false" layoutX="10.0" layoutY="10.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="darken" visible="false">
+         <children>
+            <StackPane>
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="12.0" styleClass="modal" StackPane.alignment="CENTER_LEFT">
+                     <StackPane.margin>
+                        <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                     </StackPane.margin>
+                     <padding>
+                        <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+                     </padding>
+                     <children>
+                        <Label text="لم يتم التعرف على المستند المختار." />
+                        <Label layoutX="34.0" layoutY="22.0" styleClass="icon-32" text="" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="fileNotRecognizedVBCloseBtn" mnemonicParsing="false" styleClass="icm-transparent-btn" text="" StackPane.alignment="TOP_RIGHT" />
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+</StackPane>

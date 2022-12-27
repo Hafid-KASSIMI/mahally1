@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" fillWidth="false" spacing="12.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="localexam.controllers.ExecutionPrintablesController">
+   <children>
+      <VBox styleClass="main-panel">
+         <children>
+            <Label text="إنتاج مطبوع الإجراء :">
+               <styleClass>
+                  <String fx:value="body-title" />
+                  <String fx:value="bottom-half-bar" />
+               </styleClass>
+            </Label>
+            <HBox fx:id="warningHB" visible="false">
+               <children>
+                  <Label maxWidth="1.7976931348623157E308" text="لم يتم تحديد مواعيد ومواقيت اختبارات الامتحان." wrapText="true">
+                     <graphic>
+                        <Label styleClass="icon" text="" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="24.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" spacing="12.0" styleClass="printable-options">
+                     <children>
+                        <Label text="الاختبارات المعنية :" />
+                        <RadioButton fx:id="allMattersRB" mnemonicParsing="false" selected="true" text="الجميع.">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <toggleGroup>
+                              <ToggleGroup fx:id="options1TG" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="byMatterRB" mnemonicParsing="false" text="حسب المادة :" toggleGroup="$options1TG">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </RadioButton>
+                        <ComboBox fx:id="mattersCB" maxWidth="1.7976931348623157E308" />
+                        <RadioButton fx:id="byDayRB" mnemonicParsing="false" text="حسب اليوم :" toggleGroup="$options1TG">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </RadioButton>
+                        <ComboBox fx:id="daysCB" maxWidth="1.7976931348623157E308" />
+                        <Label text="القاعات المعنية :">
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </Label>
+                        <RadioButton fx:id="allRoomsRB" mnemonicParsing="false" selected="true" text="الجميع.">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="options2TG" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="byRoomRB" mnemonicParsing="false" text="حسب القاعة :" toggleGroup="$options2TG" />
+                        <ComboBox fx:id="roomsCB" maxWidth="1.7976931348623157E308" />
+                        <Label maxWidth="1.7976931348623157E308" styleClass="text" text="ترتيب المخرجات :">
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </Label>
+                        <RadioButton fx:id="orderByMatterRB" mnemonicParsing="false" selected="true" text="حسب المواد.">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="options3TG" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="orderByRoomRB" mnemonicParsing="false" text="حسب القاعات." toggleGroup="$options3TG" />
+                        <Label styleClass="text" text="مكان الحفظ :">
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </Label>
+                        <HBox spacing="6.0">
+                           <children>
+                              <TextField fx:id="destPathTF" editable="false" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="browseBtn" mnemonicParsing="false" styleClass="icm" text="" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="6.0">
+                           <children>
+                              <Button fx:id="generateBtn" contentDisplay="RIGHT" maxHeight="48.0" maxWidth="-Infinity" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="إنتــــاج" />
+                              <ProgressIndicator fx:id="processingPI" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" visible="false" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" spacing="12.0">
+                     <children>
+                        <StackPane styleClass="border-yellow">
+                           <children>
+                              <ImageView fx:id="tplIV" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../template/resources/previews/execution.jpeg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

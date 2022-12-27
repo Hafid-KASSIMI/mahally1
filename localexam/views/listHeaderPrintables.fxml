@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="localexam.controllers.ListHeaderPrintablesController">
+   <children>
+      <VBox spacing="12.0" styleClass="main-panel">
+         <children>
+            <Label text="إنتاج مطبوع ترويسات لوائح الممتحنين :">
+               <styleClass>
+                  <String fx:value="body-title" />
+                  <String fx:value="bottom-half-bar" />
+               </styleClass>
+            </Label>
+            <HBox spacing="24.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" spacing="12.0" styleClass="printable-options">
+                     <children>
+                        <Label styleClass="text" text="مكان الحفظ :">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Label>
+                        <HBox spacing="6.0">
+                           <children>
+                              <TextField fx:id="destPathTF" editable="false" HBox.hgrow="ALWAYS" />
+                              <Button fx:id="browseBtn" mnemonicParsing="false" styleClass="icm" text="" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" spacing="12.0">
+                           <children>
+                              <Button fx:id="generateBtn" maxHeight="48.0" maxWidth="-Infinity" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="إنتــــاج" />
+                              <ProgressIndicator fx:id="processingPI" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" visible="false" />
+                           </children>
+                           <VBox.margin>
+                              <Insets top="12.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox spacing="12.0">
+                     <children>
+                        <StackPane styleClass="border-yellow">
+                           <children>
+                              <ImageView fx:id="tplIV" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../template/resources/previews/list-header.jpeg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="localexam.controllers.ExamTimeTableController">
+   <children>
+      <VBox spacing="12.0" styleClass="main-panel">
+         <children>
+            <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" nodeOrientation="RIGHT_TO_LEFT" spacing="12.0" styleClass="main-panel">
+                     <children>
+                        <Label text="الجدولة الزمنية :">
+                           <styleClass>
+                              <String fx:value="body-title" />
+                              <String fx:value="bottom-half-bar" />
+                           </styleClass>
+                        </Label>
+                        <GridPane hgap="12.0" maxWidth="600.0" vgap="6.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                              <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="المادة :" />
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="تاريخ الإجراء :" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets top="6.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="توقيت البداية :" GridPane.columnIndex="1" GridPane.valignment="CENTER" />
+                              <Label maxWidth="1.7976931348623157E308" styleClass="text" text="توقيت النهاية :" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets top="6.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Spinner fx:id="startTimeSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Spinner fx:id="endTimeSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <DatePicker fx:id="dateDP" maxWidth="1.7976931348623157E308" GridPane.rowIndex="3" />
+                              <HBox spacing="4.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <ComboBox fx:id="matterCB" editable="true" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="deleteMatBtn" graphicTextGap="0.0" mnemonicParsing="false" styleClass="icm" text="" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Button fx:id="addBtn" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="إضافة">
+                                 <padding>
+                                    <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tableTV" maxHeight="1.7976931348623157E308" maxWidth="600.0" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="matterTC" prefWidth="200.0" text="المادة" />
+                              <TableColumn fx:id="dateTC" prefWidth="120.0" text="تاريخ الإجراء" />
+                              <TableColumn fx:id="fromTC" minWidth="-Infinity" prefWidth="75.0" text="من" />
+                              <TableColumn fx:id="toTC" minWidth="-Infinity" prefWidth="75.0" text="إلى" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="editVB" alignment="CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" visible="false" StackPane.alignment="CENTER">
+                     <children>
+                        <StackPane>
+                           <children>
+                              <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefWidth="340.0" spacing="6.0" styleClass="modal">
+                                 <padding>
+                                    <Insets bottom="12.0" left="24.0" right="24.0" top="12.0" />
+                                 </padding>
+                                 <children>
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="text" text="المادة :" />
+                                    <ComboBox fx:id="editMatterCB" editable="true" maxWidth="1.7976931348623157E308" />
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="text" text="تاريخ الإجراء :">
+                                       <VBox.margin>
+                                          <Insets top="6.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="editDateDP" maxWidth="1.7976931348623157E308" />
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="text" text="توقيت البداية :">
+                                       <VBox.margin>
+                                          <Insets top="6.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Spinner fx:id="editStartTimeSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" />
+                                    <Label maxWidth="1.7976931348623157E308" styleClass="text" text="توقيت النهاية :">
+                                       <VBox.margin>
+                                          <Insets top="6.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Spinner fx:id="editEndTimeSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" />
+                                    <HBox alignment="CENTER" spacing="12.0">
+                                       <children>
+                                          <Button fx:id="editBtn" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="تعديل">
+                                             <padding>
+                                                <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button fx:id="cancelEditBtn" layoutX="124.0" layoutY="10.0" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="إلغاء">
+                                             <padding>
+                                                <Insets bottom="6.0" left="12.0" right="12.0" top="6.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets top="12.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                                 <StackPane.margin>
+                                    <Insets bottom="24.0" left="24.0" right="24.0" top="24.0" />
+                                 </StackPane.margin>
+                              </VBox>
+                              <Button fx:id="editCloseBtn" mnemonicParsing="false" styleClass="icm-transparent-btn" text="" StackPane.alignment="TOP_RIGHT" />
+                           </children>
+                        </StackPane>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </VBox>
+   </children>
+</VBox>

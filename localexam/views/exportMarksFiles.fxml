@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="localexam.controllers.ExportMarksFilesController">
+   <children>
+      <VBox spacing="12.0" styleClass="main-panel">
+         <children>
+            <Label text="تصدير مستندات تنقيط :">
+               <styleClass>
+                  <String fx:value="body-title" />
+                  <String fx:value="bottom-half-bar" />
+               </styleClass>
+            </Label>
+            <Label styleClass="text" text="المادة :">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Label>
+            <ComboBox fx:id="matterCB" maxWidth="1.7976931348623157E308" />
+            <Label styleClass="text" text="عدد المستندات :">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Label>
+            <Spinner fx:id="filesCountSP" editable="true" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="24.0" />
+            <Label fx:id="statsLbl" maxWidth="1.7976931348623157E308" styleClass="text">
+               <font>
+                  <Font size="11.0" />
+               </font>
+               <graphic>
+                  <Label styleClass="icm" text="" />
+               </graphic>
+            </Label>
+            <Label styleClass="text" text="بادئة تسمية المستندات :">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="prefixTF" />
+            <Label styleClass="text" text="مكان الحفظ :">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </Label>
+            <HBox spacing="6.0">
+               <children>
+                  <TextField fx:id="destPathTF" editable="false" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="browseBtn" mnemonicParsing="false" styleClass="icm" text="" />
+               </children>
+            </HBox>
+            <CheckBox fx:id="overwriteCB" mnemonicParsing="false" text="حذف المستندات ذات نفس التسمية." />
+            <HBox alignment="CENTER" spacing="6.0">
+               <children>
+                  <Button fx:id="generateBtn" contentDisplay="RIGHT" maxHeight="48.0" maxWidth="-Infinity" minWidth="64.0" mnemonicParsing="false" styleClass="btn" text="تصدير" />
+                  <ProgressIndicator fx:id="processingPI" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="24.0" prefWidth="24.0" visible="false" />
+               </children>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox maxHeight="1.7976931348623157E308">
+               <children>
+                  <Label text="ستتم إزاحة أرقام الامتحان المصدرة. يمكنك العودة لإعدادات الامتحان للتأكد من عدد الإزاحة." wrapText="true">
+                     <graphic>
+                        <Label styleClass="icon" text="" />
+                     </graphic>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
